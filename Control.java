@@ -37,5 +37,8 @@ public class Control {
 
 		Collections.sort(shapes, new SidesAreaComparator()); //M3 USING COMPARATOR
 		System.out.println(shapes);
+
+		Collections.sort(shapes, new ColorAreaComparator()); //M3 USING COMPARATOR
+		System.out.println(shapes);
 	}
 }
