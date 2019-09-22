@@ -31,5 +31,11 @@ public class Control {
 		for (Polygon p: shapes) {
 			System.out.println(p);
 		}
+
+		Collections.sort(shapes, new AreaSidesComparator()); //M3 USING COMPARATOR
+		System.out.println(shapes);
+
+		Collections.sort(shapes, new SidesAreaComparator()); //M3 USING COMPARATOR
+		System.out.println(shapes);
 	}
 }
