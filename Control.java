@@ -32,13 +32,22 @@ public class Control {
 			System.out.println(p);
 		}
 
+		System.out.println("\nSort using AreaSidesComparator:");
 		Collections.sort(shapes, new AreaSidesComparator()); //M3 USING COMPARATOR
-		System.out.println(shapes);
+		for (Polygon p: shapes) {
+			System.out.println(p);
+		}
 
+		System.out.println("\nSort using SidesAreaComparator:");
 		Collections.sort(shapes, new SidesAreaComparator()); //M3 USING COMPARATOR
-		System.out.println(shapes);
+		for (Polygon p: shapes) {
+			System.out.println(p);
+		}
 
+		System.out.println("\nSort using ColorAreaComparator:");
 		Collections.sort(shapes, new ColorAreaComparator()); //M3 USING COMPARATOR
-		System.out.println(shapes);
+		for (Polygon p: shapes) {
+			System.out.println(p);
+		}
 	}
 }
