@@ -1,5 +1,5 @@
 import java.util.Comparator;
-
+/** Compare color's string equivalent first, if equal, then compare area */
 public class ColorAreaComparator implements Comparator<Polygon>  {
 
     @Override
@@ -20,8 +20,6 @@ public class ColorAreaComparator implements Comparator<Polygon>  {
         }
         else {
             return colorCompare;
-
         }
-
     }
 }

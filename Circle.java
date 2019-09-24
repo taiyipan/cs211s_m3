@@ -4,7 +4,7 @@ public class Circle extends Polygon {
 	private double radius;
 	/** no-arg constructor */
 	public Circle() {
-		super(Integer.MAX_VALUE);
+		super(new CircleSideCounter()); // M3 USING STRATEGY
 		this.radius = 0;
 	}
 	/** 1-arg constructor */
@@ -15,6 +15,10 @@ public class Circle extends Polygon {
 	}
 	public Circle(int radius) {
 		this((double) radius);
+	}
+	public Circle(Color color) {
+		this();
+		super.setColor(color);
 	}
 	/** 2-arg constructor */
 	public Circle(double radius, Color color) { // M2 HOMEWORK ENUM USE
@@ -67,7 +71,7 @@ public class Circle extends Polygon {
 	}
 	@Override
 	public String toString() {
-		return "Circle, radius: " + this.radius + ", diameter: " + getDiameter() + ", circumference: " + getCircumference() + ", area: " + super.getArea() + ", color: " + super.getColor();
+		return "Circle [radius: " + this.radius + ", diameter: " + getDiameter() + ", circumference: " + String.format("%.2f", getCircumference()) + ", area: " + String.format("%.2f", super.getArea()) + ", color: " + super.getColor() + "]";
 	}
 	@Override
 	public boolean equals(Object obj) {

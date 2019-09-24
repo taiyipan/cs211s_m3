@@ -1,5 +1,5 @@
 import java.util.Comparator;
-
+/** Compare sides first, if equal, then compare area */
 public class SidesAreaComparator implements Comparator<Polygon> {
 
     @Override
@@ -18,10 +18,6 @@ public class SidesAreaComparator implements Comparator<Polygon> {
         else if (obj1.getSides() > obj2.getSides()) {
             return 1;
         }
-
         return -1;
-
     }
-
-
 }

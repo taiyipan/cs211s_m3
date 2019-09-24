@@ -5,9 +5,14 @@ public class Triangle extends Polygon {
 	private double height;
 	/** no-arg constructor */
 	public Triangle() {
-		super(3);
+		super(new TriangleSideCounter()); // M3 USING STRATEGY
 		this.base = 0;
 		this.height = 0;
+	}
+	/** 1-arg constructor */
+	public Triangle(Color color) {
+		this();
+		super.setColor(color);
 	}
 	/** 2-arg constructor */
 	public Triangle(double base, double height) {
@@ -55,7 +60,7 @@ public class Triangle extends Polygon {
 	}
 	@Override
 	public String toString() {
-		return "Triangle, base: " + this.base + ", height: " + this.height + ", area: " + super.getArea() + ", color: " + super.getColor();
+		return "Triangle [base: " + this.base + ", height: " + this.height + ", area: " + super.getArea() + ", color: " + super.getColor() + "]";
 	}
 	@Override
 	public boolean equals(Object obj) {

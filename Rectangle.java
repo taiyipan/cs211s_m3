@@ -5,9 +5,14 @@ public class Rectangle extends Polygon {
 	private double width;
 	/** no-arg constructor */
 	public Rectangle() {
-		super(4);
+		super(new RectangleSideCounter()); // M3 USING STRATEGY
 		this.length = 0;
 		this.width = 0;
+	}
+	/* 1-arg constructor */
+	public Rectangle(Color color) {
+		this();
+		super.setColor(color);
 	}
 	/** 2-arg constructor */
 	public Rectangle(double length, double width) {
@@ -55,7 +60,7 @@ public class Rectangle extends Polygon {
 	}
 	@Override
 	public String toString() {
-		return "Rectangle, length: " + this.length + ", width: " + this.width + ", area: " + super.getArea() + ", color: " + super.getColor();
+		return "Rectangle [length: " + this.length + ", width: " + this.width + ", area: " + super.getArea() + ", color: " + super.getColor() + "]";
 	}
 	@Override
 	public boolean equals(Object obj) {

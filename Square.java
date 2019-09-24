@@ -11,6 +11,10 @@ public class Square extends Rectangle {
 	public Square(int side) {
 		this((double) side);
 	}
+	public Square(Color color) {
+		this();
+		super.setColor(color);
+	}
 	/** 2-arg constructor */
 	public Square(double side, Color color) { // M2 HOMEWORK ENUM USE
 		this(side);
@@ -34,7 +38,7 @@ public class Square extends Rectangle {
 	}
 	@Override
 	public String toString() {
-		return "Square, side: " + getSide() + ", area: " + super.getArea() + ", color: " + super.getColor();
+		return "Square [side: " + getSide() + ", area: " + super.getArea() + ", color: " + super.getColor() + "]";
 	}
 	@Override
 	public boolean equals(Object obj) {
