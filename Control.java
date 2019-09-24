@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
-/** Driver class for module2 */
+/** Driver class for module 3 */
 public class Control {
 	public static void main(String[] args) {
 		//create ArrayList of Polygon class
